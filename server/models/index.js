@@ -1,3 +1,5 @@
-// const model require('./model);
+const reminder = require('./reminder');
+const user = require('./user');
 
-// module.exports = { Model };
+module.exports = { user };
+module.exports = { reminder };
