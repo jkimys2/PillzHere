@@ -1,4 +1,4 @@
-const reminder = require('./reminder');
+const reminder = require('./pillz');
 const user = require('./user');
 
 module.exports = { user };
