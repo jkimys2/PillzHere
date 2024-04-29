@@ -2,11 +2,13 @@ import { useState } from "react";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
 import Auth from "../utils/auth";
-// import { useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
+import {LOGIN_USER} from "../utils/mutations"
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
-  const [validated] = useState(false);
+  const [validated] = useState(false)
+  const [login] = useMutation(LOGIN_USER);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -27,7 +29,6 @@ const LoginForm = () => {
       Auth.login(data.login.token);
     } catch (err) {
       console.error(err);
-      setShowAlert(true);
     }
 
     setUserFormData({
@@ -40,7 +41,12 @@ const LoginForm = () => {
   return (
     <div>
       <Theme>
-        <Form.Root className="FormRoot" onSubmit={handleFormSubmit}>
+        <Form.Root
+          className="FormRoot"
+          noValidate
+          validated={validated}
+          onSubmit={handleFormSubmit}
+        >
           <Form.Field className="FormField" name="email">
             <div
               style={{
@@ -57,7 +63,7 @@ const LoginForm = () => {
                 Please provide a valid email
               </Form.Message>
             </div>
-            <Form.Control asChild>
+            <Form.Control asChild onChange={handleInputChange}>
               <input className="Input" type="email" required />
             </Form.Control>
           </Form.Field>
@@ -74,8 +80,8 @@ const LoginForm = () => {
                 Please enter a valid password
               </Form.Message>
             </div>
-            <Form.Control asChild>
-              <textarea className="Input" type="password"  required />
+            <Form.Control asChild onChange={handleInputChange}>
+              <textarea className="Input" type="password" required />
             </Form.Control>
           </Form.Field>
           <Form.Submit asChild>
@@ -89,4 +95,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm
+export default LoginForm;
