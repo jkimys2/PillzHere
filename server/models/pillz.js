@@ -36,5 +36,3 @@ const pillzSchema = new Schema({
 const Pillz = model('Pillz', pillzSchema);
 
 module.exports = Pillz;
-
-// MongoDB back end, a GraphQL API, and an Express.js and Node.js server 
