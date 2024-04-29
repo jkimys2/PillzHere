@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
     userName: {
@@ -11,43 +12,31 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    pillz: {
-        User: {
-            type: Number,
-            default: 2001
-        },
-        VitaminD: Number,
-        Advil: Number,
-        Amoxicillin: Number,
-        Prednisone: Number,
-        Lisinopril: Number,
-        Ibuprofen: Number,
-        Atenolol: Number,
-        Mucinex: Number,
-        Hydrochlorothiazide: Number
-    },
-    passwordUser: {
-        type: String,
-        required: true,
-    },
+    pillz: [
+        {
+            type: Schema.Type.ObjectId,
+            ref: "Pillz"
+        }
+    ],
     refreshToken: String
 });
 
+
+userSchema.pre('save', async function (next) {
+    if (this.isNew || this.isModified('password')) {
+      const saltRounds = 10;
+      this.password = await bcrypt.hash(this.password, saltRounds);
+    }
+  
+    next();
+  });
+  
+  userSchema.methods.isCorrectPassword = async function (password) {
+    return bcrypt.compare(password, this.password);
+  };
+  
+  const User = model('User', userSchema);
+  
 module.exports = mongoose.model('User', userSchema);
 
-// {
-//     "first_name": "Paul",
-//     "last_name": "Miller",
-//     "email": "paulmiller1@example.com",
-//     "password": "Supersecure56",
-//     "pillz": [
-//         {
-//             "pill": "Tylenol",
-//             "dosage": "200mg"
-//         },
-//         {
-//             "pill": "aceteminophin",
-//             "dosage": "250mg"
-//         }
-//     ]
-// }
+module.exports = User;
