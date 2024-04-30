@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
+import LoginForm from "../components/LoginForm";
+import SignupForm from "../components/SignupForm";
 
 const Login = () => {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -27,32 +29,9 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div>
-          <label>Email:</label>
-          <input
-            name="email"
-            type="email"
-            value={formState.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            name="password"
-            type="password"
-            value={formState.password}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Submit!</button>
-      </form>
-      {error && <div>{error.message}</div>}
-      <Link to="/signup">Sign up!</Link>
-    </div>
+  <div>
+    <h2>Welcome to PillzHere!</h2>
+  </div>
   );
 };
 
