@@ -27,6 +27,14 @@ const pillzSchema = new Schema({
     required: true,
  
   },
+  time: {
+    type: String,
+    required: true,
+  },
+  notes: {
+    type: String,
+    required: true,
+  },
   payment_type: {
     type: String,
     required: true,
