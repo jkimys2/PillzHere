@@ -10,7 +10,7 @@ const typeDefs = `
   type Pillz {
     _id: ID
     name: String
-    quantity: Number
+    quantity: Int
     dosage: String
     category: String
     frequency: String
@@ -25,10 +25,6 @@ const typeDefs = `
   type Query {
     users: [User]
     user: User
-  }
-
-  type Mutation {
-    
   }
 `;
 

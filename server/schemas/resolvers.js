@@ -1,12 +1,12 @@
-const { pillz, user } = require('../models');
-const user = require('../models/user');
+// const { pillz, user } = require('../models');
+// const user = require('../models/user');
 
-const resolvers = {
-    Query: {
-      user: async () => {
-        return user.find().populate('user');
-      },
-    }
+// const resolvers = {
+//     Query: {
+//       user: async () => {
+//         return user.find().populate('user');
+//       },
+//     }
 
 //   Mutation: {
 //     addUser: async (parent, { username, email, password }) => {
