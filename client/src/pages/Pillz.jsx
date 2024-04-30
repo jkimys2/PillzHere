@@ -3,7 +3,8 @@ import {useQuery} from '@apollo/client';
 import {GET_PILLZ} from '../utils/queries';
 import {useMutation} from '@apollo/client';
 import {UPDATE_PILLZ} from '../utils/mutations';
-import Auth from '../utils/auth';
+import AuthService from '../utils/auth.js';
+import PillForm from '../components/PillForm';
 
 const Pillz = () => {
    const { username: userParam } = useParams();
@@ -13,7 +14,7 @@ const Pillz = () => {
     const pillz = data?.pillz || [];
     const [updatePillz] = useMutation(UPDATE_PILLZ);
     const handleTakePill = async (pillId) => {
-        const token = Auth.loggedIn() ? Auth.getToken() : null;
+        const token = AuthService.loggedIn() ? AuthService.getToken() : null;
         if (!token) {
             return false;
         }
@@ -28,7 +29,7 @@ const Pillz = () => {
     if (loading) {
         return <div>Loading...</div>;
     }
-    if (!userParam && !Auth.loggedIn()) {
+    if (!userParam && !AuthService.loggedIn()) {
         return (
             <div>
                 <h2>You need to be logged in to see your Pillz!</h2>
