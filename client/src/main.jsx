@@ -5,12 +5,12 @@ import "./index.css";
 import App from "./App.jsx";
 import Login from "./pages/Login.jsx";
 import Pillz from "./pages/Pillz.jsx";
-
+import ErrorPage from "./pages/ErrorPage.jsx"
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <h1 className="display-2">Wrong page!</h1>,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
