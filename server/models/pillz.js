@@ -34,7 +34,7 @@ const pillzSchema = new Schema({
     type: String,
     required: true,
   },
-  payment_type: {
+  paymentType: {
     type: String,
     required: true,
   },  
