@@ -14,6 +14,8 @@ const typeDefs = `
     dosage: String
     category: String
     frequency: String
+    time: String
+    notes: String
     payment_type: String
   }
 
@@ -26,6 +28,13 @@ const typeDefs = `
     users: [User]
     user: User
   }
+
+  type Mutation {
+    addUser(username: String!, email: String!, password: String!, pillzId): Auth
+    login(email: String!, password: String!): Auth
+    addPillz(name: String!, quantity: Int!, dosage: String!, category: String!, frequency: String!, time: String!, notes: String!, payment_type: String!): Pillz
+    addPillz(pillzId: ID!): Pillz
+    removePillz(pillzId: ID!): Pillz
 `;
 
 module.exports = typeDefs;
