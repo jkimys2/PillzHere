@@ -25,7 +25,6 @@ const pillzSchema = new Schema({
   frequency: {
     type: String,
     required: true,
- 
   },
   time: {
     type: String,
