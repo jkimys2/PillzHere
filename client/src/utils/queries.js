@@ -38,8 +38,8 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_SINGLE_PILL = gql`
-    query pill($pillId: ID!) {
-        pill(pillId: $pillId) {
+    query Pillz($pillzId: ID!) {
+        Pillz(pillzId: $pillzId) {
             _id
             name
             dosage
