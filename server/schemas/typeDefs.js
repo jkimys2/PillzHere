@@ -16,7 +16,7 @@ const typeDefs = `
     frequency: String
     time: String
     notes: String
-    payment_type: String
+    paymentType: String
   }
 
   type Auth {
@@ -30,11 +30,10 @@ const typeDefs = `
   }
 
   type Mutation {
-    addUser(username: String!, email: String!, password: String!, pillzId): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addPillz(name: String!, quantity: Int!, dosage: String!, category: String!, frequency: String!, time: String!, notes: String!, payment_type: String!): Pillz
-    addPillz(pillzId: ID!): Pillz
-    removePillz(pillzId: ID!): Pillz
+    addPillz(name: String!, quantity: Int!, dosage: String!, category: String!, frequency: String!, time: String!, notes: String!, paymentType: String!): Pillz
+  }
 `;
 
 module.exports = typeDefs;
