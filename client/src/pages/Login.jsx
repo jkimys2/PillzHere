@@ -6,7 +6,7 @@ import Auth from "../utils/auth";
 import LoginForm from "../components/LoginForm";
 import SignupForm from "../components/SignupForm";
 
-const Login = () => {
+export default function Login() {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error }] = useMutation(LOGIN_USER);
 
@@ -29,10 +29,8 @@ const Login = () => {
   };
 
   return (
-  <div>
-    <h2>Welcome to PillzHere!</h2>
-  </div>
+    <>
+      <h2>hello</h2>
+    </>
   );
-};
-
-export default Login;
+}

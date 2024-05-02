@@ -4,7 +4,7 @@ import { QUERY_PILLZ } from "../utils/queries";
 import { useMutation } from "@apollo/client";
 import { ADD_PILLZ } from "../utils/mutations";
 import AuthService from "../utils/auth.js";
-import PillForm from "../components/PillForm";
+// import PillForm from "../components/PillForm";
 
 const Pillz = () => {
   const { username: userParam } = useParams();
