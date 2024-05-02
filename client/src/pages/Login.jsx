@@ -3,8 +3,15 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
-import LoginForm from "../components/LoginForm";
-import SignupForm from "../components/SignupForm";
+// import LoginForm from "../components/LoginForm";
+// import SignupForm from "../components/SignupForm";
+import { Container, Row, Col } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
+import Carousel from "react-bootstrap/Carousel";
+import 'bootstrap/dist/css/bootstrap.css'
+import CarOne from "../assets/images/CarOne.jpeg"
+import CarTwo from "../assets/images/CarTwo.jpeg"
+
 
 export default function Login() {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -30,7 +37,17 @@ export default function Login() {
 
   return (
     <>
-      <h2>hello</h2>
+    <Container fluid>
+      <Carousel>
+        <Carousel.Item>
+        <img src={CarOne} className="d-block w-80 h-30" alt="Carousel 1" />
+        </Carousel.Item>
+        <Carousel.Item>
+        <img src={CarTwo} className="d-block w-80 h-30" alt="Carousel 2" />
+        </Carousel.Item>
+      </Carousel>
+      </Container>
+
     </>
   );
 }
