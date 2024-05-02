@@ -25,7 +25,7 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_PILLZ = gql`
-  mutation addPillz(name: String!, quantity: Int!, dosage: String!, category: String!, frequency: String!, time: String!, notes: String!, paymentType: String!) {
+  mutation addPillz($name: String!, $quantity: Int!, $dosage: String!, $category: String!, $frequency: String!, $time: String!, $notes: String!, $paymentType: String!) {
     addPillz(name: $name, quantity: $quantity, dosage: $dosage, category: $category, frequency: $frequency, time: $time, notes: $notes, paymentType: $paymentType) {
         _id
     }
