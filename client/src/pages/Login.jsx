@@ -1,13 +1,11 @@
-import "./Login.css"
+import "./Login.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 // import LoginForm from "../components/LoginForm";
 // import SignupForm from "../components/SignupForm";
-import { Container, Row, Col } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import { Container, Row } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.css";
 import CarOne from "../assets/images/CarOne.jpeg";
@@ -41,10 +39,22 @@ export default function Login() {
         <Row>
           <Carousel>
             <Carousel.Item>
-              <img src={CarOne} className="image" width={1600} height={850} alt="Carousel 1"  />
+              <img
+                src={CarOne}
+                className="image"
+                width={1600}
+                height={850}
+                alt="Carousel 1"
+              />
             </Carousel.Item>
             <Carousel.Item>
-              <img src={CarTwo} className="image" width={1600} height={850} alt="Carousel 2" />
+              <img
+                src={CarTwo}
+                className="image"
+                width={1600}
+                height={850}
+                alt="Carousel 2"
+              />
             </Carousel.Item>
           </Carousel>
         </Row>
