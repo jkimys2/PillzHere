@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import "./Pillz.css";
+import { Form, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_PILLZ } from "../utils/queries";
 import { useMutation } from "@apollo/client";
@@ -29,13 +30,14 @@ const Pillz = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
-  if (!userParam && !AuthService.loggedIn()) {
-    return (
-      <div>
-        <h2>You need to be logged in to see your Pillz!</h2>
-      </div>
-    );
-  } else {
+  // if (!userParam && !AuthService.loggedIn()) {
+  //   return (
+  //     <div>
+  //       <h2>You need to be logged in to see your Pillz!</h2>
+  //     </div>
+  //   );
+  // } else
+  {
     return (
       <div>
         <h2>
@@ -60,14 +62,16 @@ const Pillz = () => {
             </div>
             <div>
               <PillForm />
-              <button>
-                <Link to={`/delete/${pill._id}`}>Delete Pill</Link>
-              </button>
+
             </div>
           </div>
         ))}
       </div>
+      
     );
+    <Form>
+      
+    </Form>
   }
 };
 
