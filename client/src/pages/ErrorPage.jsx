@@ -16,7 +16,7 @@ export default function ErrorPage() {
     <div style={style}>
       <img src={sadlouis} alt="Louis is sad" />
       <h1>Louis is sad</h1>
-      <p>There are no Pillz Here!</p>
+      <h4>There are no Pillz Here!</h4>
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
