@@ -1,5 +1,5 @@
-const reminder = require('./pillz');
-const user = require('./user');
+const Pillz = require('./Pillz');
+const User = require('./User');
 
-module.exports = { user };
-module.exports = { reminder };
+module.exports = { User };
+module.exports = { Pillz };
