@@ -1,3 +1,4 @@
+import "./Login.css"
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
@@ -8,10 +9,9 @@ import Auth from "../utils/auth";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
-import 'bootstrap/dist/css/bootstrap.css'
-import CarOne from "../assets/images/CarOne.jpeg"
-import CarTwo from "../assets/images/CarTwo.jpeg"
-
+import "bootstrap/dist/css/bootstrap.css";
+import CarOne from "../assets/images/CarOne.jpeg";
+import CarTwo from "../assets/images/CarTwo.jpeg";
 
 export default function Login() {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -37,17 +37,18 @@ export default function Login() {
 
   return (
     <>
-    <Container fluid>
-      <Carousel>
-        <Carousel.Item>
-        <img src={CarOne} className="d-block w-80 h-30" alt="Carousel 1" />
-        </Carousel.Item>
-        <Carousel.Item>
-        <img src={CarTwo} className="d-block w-80 h-30" alt="Carousel 2" />
-        </Carousel.Item>
-      </Carousel>
+      <Container fluid>
+        <Row>
+          <Carousel>
+            <Carousel.Item>
+              <img src={CarOne} className="image" width={1600} height={850} alt="Carousel 1"  />
+            </Carousel.Item>
+            <Carousel.Item>
+              <img src={CarTwo} className="image" width={1600} height={850} alt="Carousel 2" />
+            </Carousel.Item>
+          </Carousel>
+        </Row>
       </Container>
-
     </>
   );
 }
