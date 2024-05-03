@@ -13,7 +13,7 @@ const SignupForm = () => {
   });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  const [createUser] = useMutation(ADD_USER);
+  const [addUser] = useMutation(ADD_USER);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -23,7 +23,6 @@ const SignupForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // check if form has everything (as per react-bootstrap docs)
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -31,18 +30,11 @@ const SignupForm = () => {
     }
 
     try {
-      const { data } = await createUser({ variables: { ...userFormData } });
-      Auth.login(data.createUser.token);
+      const { data } = await addUser({ variables: { ...userFormData } });
+      Auth.login(data.addUser.token);
     } catch (err) {
       console.error(err);
       setShowAlert(true);
-    }
-
-    try {
-      const { data } = await createUser({ variables: { ...userFormData } });
-      Auth.login(data.createUser.token);
-    } catch (err) {
-      console.error(err);
     }
     setUserFormData({
       username: "",
