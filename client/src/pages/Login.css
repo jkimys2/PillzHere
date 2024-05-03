@@ -1,0 +1,24 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  list-style-type: none;
+  /* background: radial-gradient(
+    circle,
+    rgba(253, 154, 160, 0.7512254901960784) 0%,
+    rgba(254, 255, 133, 0.6111694677871149) 100%
+  ); */
+  background: radial-gradient(
+    circle,
+    rgba(129, 212, 252, 1) 50%,
+    rgba(92, 165, 222, 1) 100%
+  );
+}
+
+.image {
+  border-radius: 35px;
+  box-shadow: 0px 43px 68px 0px rgba(87, 87, 87, 0.45),
+  25px 0px 20px -20px rgba(87, 87, 87, 0.45),
+  0px 25px 20px -20px rgba(87, 87, 87, 0.45),
+  -25px 0px 20px -20px rgba(87, 87, 87, 0.45);
+}
