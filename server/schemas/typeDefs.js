@@ -27,6 +27,8 @@ const typeDefs = `
   type Query {
     users: [User]
     user: User
+    pillz: [Pillz]
+    me: Auth
   }
 
   type Mutation {
