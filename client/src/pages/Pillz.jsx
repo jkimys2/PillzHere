@@ -5,7 +5,7 @@ import { QUERY_PILLZ } from "../utils/queries";
 import { useMutation } from "@apollo/client";
 import { ADD_PILLZ } from "../utils/mutations";
 import AuthService from "../utils/auth.js";
-// import PillForm from "../components/PillForm";
+import PillForm from "../components/PillForm";
 
 const Pillz = () => {
   const { username: userParam } = useParams();
@@ -30,14 +30,13 @@ const Pillz = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
-  // if (!userParam && !AuthService.loggedIn()) {
-  //   return (
-  //     <div>
-  //       <h2>You need to be logged in to see your Pillz!</h2>
-  //     </div>
-  //   );
-  // } else
-  {
+  if (!userParam && !AuthService.loggedIn()) {
+    return (
+      <div>
+        <h2 className="h2">You need to be logged in to see your Pillz!</h2>
+      </div>
+    );
+  } else {
     return (
       <div>
         <h2>
@@ -62,16 +61,11 @@ const Pillz = () => {
             </div>
             <div>
               <PillForm />
-
             </div>
           </div>
         ))}
       </div>
-      
     );
-    <Form>
-      
-    </Form>
   }
 };
 
