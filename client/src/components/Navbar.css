@@ -1,0 +1,85 @@
+#root {--bs-success: #5abbe5;}
+.navbar {
+    background-color: #333;
+    background: linear-gradient(90deg, #9a9a9a, #eff0e6);
+    padding: 10px;
+    display: flex;
+    border-radius: 75%;
+    height: 350px;
+    max-width: 400px;
+    margin: auto;
+    font-family: "Poppins", sans-serif;
+    font-size: 120%;
+  
+}
+#bigpill {
+    color: white;
+    text-decoration: none;
+     background: linear-gradient(180deg, #4aaae6, #295672 );
+    border-radius: 5px;
+    margin: 0 auto;
+    font-family: Poppins, sans-serif;
+    width: 100%;
+    border-radius: 75px;
+
+}
+#bigpill:hover {
+    color: white;
+    background:linear-gradient(180deg,#db5454, #ae1010);
+}
+#bootins {
+    color: white;
+    text-decoration: none;
+    padding: 50px;
+    background: #1cb9e4 linear-gradient(180deg, #20c4f2, #2d768a ) ;
+    border-radius: 5px;
+    margin: 0 10%;
+    font-family: Poppins, sans-serif;
+    width: 100%;
+    border-radius: 75px;
+}
+#smodal {
+    --bs-modal-font-family-base: "Poppins", sans-serif;
+    --bs-modal-zindex: 1055;
+    --bs-modal-width: 500px;
+    --bs-modal-padding: 1rem;
+    --bs-modal-margin: 0 auto;
+    --bs-modal-color: white !important;
+    --bs-modal-bg: #1cb9e4;
+    --bs-modal-border-color: var(--bs-border-color-translucent);
+    --bs-modal-border-width: var(--bs-border-width);
+    --bs-modal-border-radius: var(--bs-border-radius-lg);
+    --bs-modal-box-shadow: var(--bs-box-shadow-sm);
+    --bs-modal-inner-border-radius: calc(var(--bs-border-radius-lg) - (var(--bs-border-width)));
+    --bs-modal-header-padding-x: 1rem;
+    --bs-modal-header-padding-y: 1rem;
+    --bs-modal-header-padding: 1rem 1rem;
+    --bs-modal-header-border-color: var(--bs-border-color);
+    --bs-modal-header-border-width: var(--bs-border-width);
+    --bs-modal-title-line-height: 1.5;
+    --bs-modal-footer-gap: 0.5rem;
+    --bs-modal-footer-bg: ;
+    --bs-modal-footer-border-color: var(--bs-border-color);
+    --bs-modal-footer-border-width: var(--bs-border-width);
+
+}
+
+a .navbar #smodal {
+    color: white;
+    text-decoration: none;
+    padding: 50%;
+    background: #1cb9e4;
+
+    
+}
+a  #bootins:hover {
+    color: black;
+    background: linear-gradient(180deg, #e9f238, #898e1f);
+   
+    
+}
+#lilpill {
+    color: white !important;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
