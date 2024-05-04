@@ -59,11 +59,11 @@ const Pillz = () => {
                 </span>
               </button>
             </div>
-            <div>
-              <PillForm />
-            </div>
           </div>
         ))}
+        <div>
+          <PillForm />
+        </div>
       </div>
     );
   }

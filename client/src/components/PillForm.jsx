@@ -31,7 +31,7 @@ const pillForm = () => {
     }
 
     try {
-      const { data } = await addPillz({ variables: { ...userFormData } });
+      const { data } = await addPillz({ variables: { ...userFormData, quantity: parseInt(userFormData.quantity) } });
       Auth.login(data.addPillz.token);
     } catch (err) {
       console.error(err);
