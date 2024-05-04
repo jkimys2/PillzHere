@@ -49,7 +49,8 @@ const Pillz = () => {
             <div className="pillz-info">
               <p>{pill.name}</p>
               <p>{pill.dosage}</p>
-              <p>{pill.frequency}</p>
+              <p>{pill.quantity}</p>
+              
             </div>
             <div>
               <button onClick={() => handleTakePill(pill._id)}>
