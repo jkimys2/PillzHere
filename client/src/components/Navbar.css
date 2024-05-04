@@ -83,6 +83,33 @@ a  #bootins:hover {
 }
 
 #booted a:hover {
-    color: white
+    color: black;
+  
+    
+    
+}
+#booted:hover{
+    background: linear-gradient(180deg, #e9f238, #898e1f);
+    border-radius: 75px;
+}
+#booted {
+    
+    background: #1cb9e4 linear-gradient(180deg, #20c4f2, #2d768a );
+    border-radius: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+    margin: 0 0 0 6%;
+    height: 120px;
+    font-family: Poppins, sans-serif;
+    width: 100%;
 
+    
+    
+
+}
+#booted a {
+    color: white;
+   
 }
