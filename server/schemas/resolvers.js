@@ -1,7 +1,6 @@
 const { User, Pillz } = require("../models");
 const { signToken, AuthenticationError } = require("../utils/auth");
-console.log(User);
-console.log(Pillz);
+
 const resolvers = {
   Query: {
     users: async () => {

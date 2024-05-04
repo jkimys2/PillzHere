@@ -9,12 +9,10 @@ import PillForm from "../components/PillForm";
 
 const Pillz = () => {
   const { username: userParam } = useParams();
-  console.log(userParam)
   const { loading, data } = useQuery(QUERY_PILLZ, {
     variables: { username: userParam },
   });
   const pillz = data?.pillz || [];
-  console.log(pillz)
   const [updatePillz] = useMutation(ADD_PILLZ);
   const handleTakePill = async (pillId) => {
     const token = AuthService.loggedIn() ? AuthService.getToken() : null;
