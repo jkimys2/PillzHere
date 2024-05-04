@@ -23,8 +23,10 @@ const Navigation = () => {
                 <Nav.Link as={Link} to='/'>
                   {AuthService.loggedIn()? (
                       <>
+                      <Container id= "booted" >
                       <Nav.Link as={Link} to='/pillz'> See your Pillz</Nav.Link>
                       <Nav.Link onClick={AuthService.logout}>LogOut</Nav.Link>
+                      </Container>
                       </>
                   ):(
                     <Nav.Link onClick={()=>setShowModal(true)} id='bootins'>LogIn|SignUp</Nav.Link>

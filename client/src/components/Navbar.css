@@ -16,7 +16,6 @@
     color: white;
     text-decoration: none;
      background: linear-gradient(180deg, #4aaae6, #295672 );
-    border-radius: 5px;
     margin: 0 auto;
     font-family: Poppins, sans-serif;
     width: 100%;
@@ -32,7 +31,6 @@
     text-decoration: none;
     padding: 50px;
     background: #1cb9e4 linear-gradient(180deg, #20c4f2, #2d768a ) ;
-    border-radius: 5px;
     margin: 0 10%;
     font-family: Poppins, sans-serif;
     width: 100%;
@@ -82,4 +80,36 @@ a  #bootins:hover {
     color: white !important;
     font-weight: 700;
     font-size: 1.2rem;
+}
+
+#booted a:hover {
+    color: black;
+  
+    
+    
+}
+#booted:hover{
+    background: linear-gradient(180deg, #e9f238, #898e1f);
+    border-radius: 75px;
+}
+#booted {
+    
+    background: #1cb9e4 linear-gradient(180deg, #20c4f2, #2d768a );
+    border-radius: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+    margin: 0 0 0 6%;
+    height: 120px;
+    font-family: Poppins, sans-serif;
+    width: 100%;
+
+    
+    
+
+}
+#booted a {
+    color: white;
+   
 }

@@ -48,8 +48,9 @@ const Pillz = () => {
           <div key={pill._id} className="pillz col-12 col-md-10 mb-3 p-3">
             <div className="pillz-info">
               <p>{pill.name}</p>
-              <p>{pill.quantity}</p>
               <p>{pill.dosage}</p>
+              <p>{pill.quantity}</p>
+              
             </div>
             <div>
               <button onClick={() => handleTakePill(pill._id)}>
