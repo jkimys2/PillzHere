@@ -13,7 +13,7 @@ const resolvers = {
     //It is "pillzs" with an s because mongoDB does not know the z is implied plural. It actually helps in our favor.
     pillz: async (parent, { username }) => {
       const params = username ? { username } : {};
-      return Pillz.find(params).sort({ createdAt: -1 });
+      return User.find({params}).populate("pillz");
     },
     me: async (parent, args, context) => {
       if (context.user) {
