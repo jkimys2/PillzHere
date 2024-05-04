@@ -1,10 +1,6 @@
 const {Schema, model} = require('mongoose');
 
 const pillzSchema = new Schema({
-  id: { 
-    type: String,
-    required: true,
-  },
   name: {
     type: String,
     required: true,
@@ -20,23 +16,18 @@ const pillzSchema = new Schema({
   },
   category: {
     type: String,
-    required: true,
   },
   frequency: {
     type: String,
-    required: true,
   },
   time: {
     type: String,
-    required: true,
   },
   notes: {
     type: String,
-    required: true,
   },
   paymentType: {
     type: String,
-    required: true,
   },  
 });
 
