@@ -1,19 +1,27 @@
 import {gql} from '@apollo/client';
 
 export const QUERY_PILLZ = gql`
-    query pillz($username: String) {
-        pillz(username: $username) {
-            _id
-            name
-            dosage
-            frequency
-            category
-            time
-            notes
-            payment_type
-        }
+query user($username: String!) {
+    user(username: $username) {
+      _id
+      email
+      password
+      pillz {
+        _id
+        category
+        dosage
+        frequency
+        name
+        notes
+        payment_type
+        quantity
+        time
+      }
+      username
     }
+  }
 `;
+
 
 export const QUERY_USER = gql`
 
