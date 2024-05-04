@@ -44,7 +44,7 @@ const SignupForm = () => {
   };
 
   return (
-    <div>
+    <>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
           dismissible
@@ -112,7 +112,7 @@ const SignupForm = () => {
           Sign Up!
         </Button>
       </Form>
-    </div>
+    </>
   );
 };
 
