@@ -3,13 +3,6 @@ const { signToken, AuthenticationError } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    users: async () => {
-      return User.find().populate("pillz");
-    },
-    user: async (parent, { username }) => {
-      return User.findOne({ username }).populate("pillz");
-    },
-    //It is "pillzs" with an s because mongoDB does not know the z is implied plural. It actually helps in our favor.
     pillz: async (parent, { username }) => {
       const params = username ? { username } : {};
       return User.find({params}).populate("pillz");
