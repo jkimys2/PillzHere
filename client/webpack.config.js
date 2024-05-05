@@ -21,10 +21,10 @@ module.exports = () => {
         }),
        
         
-        new InjectManifest({
-          swSrc: './src-sw.js',
-          swDest: 'src-sw.js',
-        }),
+        // new InjectManifest({
+        //   swSrc: './src-sw.js',
+        //   swDest: 'src-sw.js',
+        // }),
   
         
         new WebpackPwaManifest({
@@ -33,13 +33,13 @@ module.exports = () => {
           name: 'PillzHere',
           short_name: 'PillzHere',
           description: 'Never forget your PILLZ!',
-          background_color: '##E6E6FA',
+          background_color: '#E6E6FA',
           theme_color: '#967bb6',
-          start_url: './',
-          publicPath: './',
+          start_url: '/',
+          publicPath: '/',
           icons: [
             {
-              src: path.resolve('src/images/pillz.png'),
+              src: path.resolve('src/assets/images/pillz.png'),
               sizes: [96, 128, 192, 256, 384, 512],
               destination: path.join('assets', 'icons'),
             },
