@@ -3,6 +3,7 @@ import { Form, Button, Alert } from "react-bootstrap";
 import { ADD_PILLZ } from "../utils/mutations";
 import Auth from "../utils/auth";
 import { useMutation } from "@apollo/client";
+import { QUERY_USER } from "../utils/queries";
 
 const pillForm = () => {
   const [userFormData, setUserFormData] = useState({
@@ -14,7 +15,8 @@ const pillForm = () => {
   });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  const [addPillz] = useMutation(ADD_PILLZ);
+  const [addPillz] = useMutation(ADD_PILLZ, {refetchQueries: [QUERY_USER, "me"]});
+
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -24,15 +26,15 @@ const pillForm = () => {
     event.preventDefault();
 
     // check if form has everything (as per react-bootstrap docs)
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+    // const form = event.currentTarget;
+    // if (form.checkValidity() === false) {
+    //   // event.preventDefault();
+    //   event.stopPropagation();
+    // }
 
     try {
-      const { data } = await addPillz({ variables: { ...userFormData, quantity: parseInt(userFormData.quantity) } });
-      Auth.login(data.addPillz.token);
+     await addPillz({ variables: { ...userFormData, quantity: parseInt(userFormData.quantity) } });
+      // Auth.login(data.addPillz.token);
     } catch (err) {
       console.error(err);
       setShowAlert(true);

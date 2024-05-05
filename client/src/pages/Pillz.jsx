@@ -16,7 +16,8 @@ const Pillz = () => {
   const [newPill, setNewPill] = useState([]);
   const { loading, data } = useQuery(QUERY_USER);
   const userData = data?.me || {};
-  const [ savedPillz, setSavedPillz] = useState(useQuery(QUERY_PILLZ));
+  console.log(userData)
+  const [savedPillz, setSavedPillz] = useState(useQuery(QUERY_PILLZ));
   const [addPillz] = useMutation(ADD_PILLZ);
 
   // const pillz = data?.pillz || [];
@@ -74,7 +75,7 @@ const Pillz = () => {
     return (
       <div>
         <h2>
-          {userData.pillz
+          {userData.pillz.length > 0
             ? `These are ${userData.username}'s Pillz:`
             : "You have no saved Pillz!"}
         </h2>
