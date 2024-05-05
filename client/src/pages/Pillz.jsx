@@ -1,6 +1,5 @@
 import "./Pillz.css";
 import { useState } from "react";
-import { Form, useParams } from "react-router-dom";
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_USER, QUERY_PILLZ } from "../utils/queries";
 import { ADD_PILLZ } from "../utils/mutations";
@@ -8,40 +7,13 @@ import AuthService from "../utils/auth.js";
 import PillForm from "../components/PillForm";
 
 const Pillz = () => {
-  // const { formState, setFormState } = useState({});
-  // const [validated] = useState(false)
-  // const { loading, data } = useQuery(QUERY_PILLZ, {
-  //   variables: { username: userParam },
-  // });
+
   const [newPill, setNewPill] = useState([]);
   const { loading, data } = useQuery(QUERY_USER);
   const userData = data?.me || {};
   console.log(userData)
   const [savedPillz, setSavedPillz] = useState(useQuery(QUERY_PILLZ));
   const [addPillz] = useMutation(ADD_PILLZ);
-
-  // const pillz = data?.pillz || [];
-  // const [updatePillz] = useMutation(ADD_PILLZ);
-  const renderPill = async () => {
-    try {
-      const response = await savedPillz;
-
-      if (!response.ok) {
-        throw new Error("something went wrong!");
-      }
-
-      const { items } = await response.json;
-      const pillData = items.map((pill) => ({
-        name: pill.name,
-        quantity: pill.quantity,
-        dosage: pill.dosage,
-      }));
-
-      setSavedPillz(pillData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   const handleTakePill = async (pillId) => {
     const token = AuthService.loggedIn() ? AuthService.getToken() : null;
@@ -61,17 +33,7 @@ const Pillz = () => {
 
   if (loading) {
     return <div>Loading...</div>;
-  }
-
-  // if (!userData && !AuthService.loggedIn()) {
-  //   return (
-  //     <div>
-  //       <h2 className="h2">You need to be logged in to see your Pillz!</h2>
-  //     </div>
-  //   );
-
-  // } else
-  {
+  } else {
     return (
       <div>
         <h2>
