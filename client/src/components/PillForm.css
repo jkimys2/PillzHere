@@ -10,7 +10,7 @@
   background-color: #db5454;
   color: aliceblue;
   border-radius: 80px;
-  width: 500px;
+  width: 400px;
 }
 
 .cont:hover {
@@ -20,15 +20,22 @@
 
 .label {
   margin-top: 15px;
-  font-size: large;
-  font-weight: 600;
+  font-size: medium;
+  font-weight: bolder;
 }
 
 .form {
   padding: 8px;
-  width: 300px;
+  width: 280px;
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+  color: #c63838;
+
 }
 
 .button {
-  margin: 15px;
+  margin: 10px;
+  margin-top: 20px;
+  width: 150px;
 }

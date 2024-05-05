@@ -65,7 +65,7 @@ const pillForm = () => {
           <Form.Control
             className="form"
             type="text"
-            placeholder="Pillz Name"
+            placeholder="name"
             name="name"
             onChange={handleInputChange}
             value={userFormData.name}
@@ -81,7 +81,7 @@ const pillForm = () => {
           <Form.Control
             className="form"
             type="text"
-            placeholder="Pillz Quantity"
+            placeholder="quantity"
             name="quantity"
             onChange={handleInputChange}
             value={userFormData.quantity}
@@ -97,7 +97,7 @@ const pillForm = () => {
           <Form.Control
             className="form"
             type="text"
-            placeholder="Pillz Dosage"
+            placeholder="dosage"
             name="dosage"
             onChange={handleInputChange}
             value={userFormData.dosage}
