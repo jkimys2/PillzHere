@@ -35,7 +35,7 @@ const Pillz = () => {
     return <div>Loading...</div>;
   } else {
     return (
-      <div>
+      <div className= "pill-container">
         <h2>
           {userData.pillz.length > 0
             ? `These are ${userData.username}'s Pillz:`
@@ -44,12 +44,12 @@ const Pillz = () => {
         {userData.pillz.map((pill) => (
           <div key={pill._id} className="pillz col-12 col-md-10 mb-3 p-3">
             <div className="pillz-info">
-              <p>{pill.name}</p>
-              <p>{pill.quantity}</p>
-              <p>{pill.dosage}</p>
+              <h3> {pill.name}</h3>
+              <p>Quantity left:  {pill.quantity}</p>
+              <p>Dose:  {pill.dosage}</p>
             </div>
             <div>
-              <button onClick={() => handleTakePill(pill._id)}>
+              <button id="takebtn" onClick={() => handleTakePill(pill._id)}>
                 Take Pill{" "}
                 <span role="img" aria-label="pill">
                   💊
@@ -59,7 +59,7 @@ const Pillz = () => {
           </div>
         ))}
 
-        <div>
+        <div id="pillform">
           <PillForm />
         </div>
       </div>

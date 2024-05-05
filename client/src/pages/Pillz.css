@@ -12,3 +12,80 @@
 .h2 {
   font-weight: 600;
 }
+
+.pillz {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(90deg, #9a9a9a, #eff0e6);
+  color: Black;
+  border-radius: 75%;
+  width: 75%;
+  min-width: fit-content;
+  margin: auto;
+  max-width: 400px;
+  height: 350px;
+  padding: 0px 10px;
+  box-shadow: 0px 15px 5px rgba(0, 0, 0, 0.2);
+  font-size: 1.5em;
+  font-weight: 300;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: 500;
+  font-size: fit-content;
+  
+  }
+
+  
+
+
+
+#takebtn{
+  
+  border-radius: 10px;
+  background:#4aaae6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  line-height: normal;
+  cursor:grab;
+  width: 100%;
+  padding: 10px;
+  margin-right: 25%;
+
+  
+}
+#takebtn:hover{
+  line-height: normal;
+  cursor:grab;
+  width: 165px;
+  padding: 10px;
+  rotate: 10deg;
+  margin-right: 25%;
+}
+.pill-container {
+  background: linear-gradient(90deg, #fe990a, #f9bf5b, #fe990a); 
+  margin: auto;
+  width: 45%;
+  border-radius: 25px 25px 5% 5%;
+  align-items: center;
+  box-shadow: 30px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.pill-container h2 {
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  background-color: azure;
+  height: 120px;
+  width: 100%;
+  border-radius: 25px 25px 0px 0px; 
+  font-family: Poppins, sans-serif;
+  font-size: fit-content;
+  box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2) ;
+
+}
+
+#pillform {
+  position: fixed;
+  top: 30%;
+  left: 0%;
+}
