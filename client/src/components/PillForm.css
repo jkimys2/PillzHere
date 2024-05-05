@@ -1,5 +1,6 @@
 #root {
   background-color: yellow;
+  
 }
 
 .cont {
@@ -7,15 +8,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: #db5454;
+  background: #db5454;
   color: aliceblue;
   border-radius: 80px;
   width: 400px;
+opacity: .5;
 }
 
 .cont:hover {
   background-color: #e9f238;
   color: black;
+  opacity: .95;
 }
 
 .label {
