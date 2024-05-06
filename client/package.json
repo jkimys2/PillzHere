@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "webpack-build": "webpack --mode production"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@apollo/client": "^3.7.14",
@@ -40,6 +39,7 @@
     "react-bootstrap": "^2.7.4",
     "style-loader": "^3.2.1",
     "vite": "^4.4.5",
+    "vite-plugin-pwa": "^0.20.0",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.0.0",
