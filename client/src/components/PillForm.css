@@ -1,5 +1,6 @@
 #root {
   background-color: yellow;
+  
 }
 
 .cont {
@@ -11,11 +12,13 @@
   color: aliceblue;
   border-radius: 80px;
   width: 400px;
+opacity: .5;
 }
 
 .cont:hover {
   background-color: #e9f238;
   color: black;
+  opacity: .95;
 }
 
 .label {
