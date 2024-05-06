@@ -58,7 +58,7 @@ You can see how PillzHere appears below:
 
 ## Credits
 
-Thank you, Andrew B and Chris B, for all your help! 😊👍
+Thank you, Andrew B, Chris B, and Michael H, for all your help! 😊👍
 
 
 ## Links
